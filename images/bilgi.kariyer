@@ -1,0 +1,1237 @@
+
+<script language="javascript">
+	function wPencereAc(URL,w,h)
+	{
+		param='scrollbars=yes,status=no,width='+w+',height='+h+',location=no,resizable=yes,menubar=no'
+		PRWindow = window.open(URL, '', param);
+		PRWindow.focus();
+	}
+
+	function show(object) 
+	{
+		if (document.all[object].style.display=='none') 
+			{document.all[object].style.display = '';}
+		else
+			{document.all[object].style.display= 'none';}
+	}
+
+	function hide(object) {
+		if (document.getElementById) {
+		    document.getElementById(object).style.visibility = 'hidden';
+			}
+		else if (document.layers && document.layers[object]) {
+			document.layers[object].visibility = 'hidden';
+		}
+		else if (document.all) {
+			document.all[object].style.visibility = 'hidden';
+		}
+	}
+
+	function DisplayCV()
+	{
+		yol="/kariyerim/cvpreviewprint.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&cv_lang=T&AktifId=1207983" ;
+		editWindow = window.open(yol, 'editWindow', 'scrollbars=yes,menubar=0,toolbar=0,statusbar=0,width=580,height=580,resizable=yes');
+		editWindow.focus();
+	}
+
+	function photo_add()
+	{
+		URL="http://web2.kariyer.net/Kariyerim/photo_add.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6";
+		RWindow = window.open(URL, '', 'scrollbars=yes,status=no,width=800,height=518,location=no,resizable=yes,menubar=no');
+		RWindow.focus();
+	}
+
+
+	function ShowCV(strname,strtxt)
+	{
+		CLWindow = window.open('', 'onyazi', 'scrollbars=yes,status=yes,width=570,height=550,location=no,resizable=yes,toolbar=1');
+		CLWindow.document.open()
+		CLWindow.document.write ('<html>')
+		CLWindow.document.write ('<head>')
+		CLWindow.document.write ('<title>'+strname+' (CV)</title>')
+		CLWindow.document.write ('<meta http-equiv="Content-Type" content="text/html; charset=windows-1254">')
+		CLWindow.document.write ('<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-9">')
+		CLWindow.document.write ('</head>')
+		CLWindow.document.write ('<body bgcolor="white">')
+		CLWindow.document.write ('<table border=1 bordercolor="#ffefe8" cellpadding=5 width="530" align="center"><tr><td width="530">')
+		CLWindow.document.write ('<BR>')
+		CLWindow.document.write ('<font face="verdana,geneva" color="black" size="1">')
+		CLWindow.document.write (strtxt)
+		CLWindow.document.write ('</font>')
+		CLWindow.document.write ('</td></tr></table></body>')
+		CLWindow.document.write ('</html>')
+		CLWindow.document.close()
+		CLWindow.focus();
+	}
+
+	
+	function SendCV()
+	{
+		var eposta=prompt("Özgeçmiþinizi göndermek istediðiniz e-posta adresini giriniz","");
+		if (!echeck(eposta))
+			{
+				alert("Girdiðiniz e-posta adresi hatalý. Tekrar deneyin!");
+				return
+			}
+		yol="/kariyerim/cvpreviewpdf.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&cv_lang=T&AktifId=1207983&eposta="+eposta ;
+		sendWindow = window.open(yol, 'sendWindow', 'scrollbars=yes,menubar=0,toolbar=0,statusbar=0,width=270,height=150,resizable=yes');
+		sendWindow.focus();
+	}
+	function echeck(str) {
+		
+		var errorSTR = ""
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length;
+		var ldot=str.indexOf(dot)
+		
+		
+		if (str.indexOf(at)==-1){
+		   return false
+		}
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+			return false
+		}
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+			return false
+		}
+		if (str.indexOf(at,(lat+1))!=-1){
+			return false
+		}
+		if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+			return false
+		}
+		if (str.indexOf(dot,(lat+2))==-1){
+			return false
+		}
+		if (str.indexOf(" ")!=-1){
+			return false
+		}
+		if (str.substring(lstr-1)==dot) {
+			return false
+		}
+		return true					
+	}
+</script>
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1254">
+<link rel="STYLESHEET" type="text/css" href="/incfiles/style1.css">
+
+<title>Kariyer.Net </title>
+
+<meta name="rating" content="General">
+<meta name="language" content="tr">
+<meta name="resource-type" content="document">
+
+
+	<META NAME="robots" CONTENT="noindex"> 
+	<META NAME="robots" CONTENT="nofollow">
+	<META NAME="robots" CONTENT="noindex,nofollow">
+	<META NAME="robots" CONTENT="none">
+
+<META HTTP-EQUIV="Copyright" CONTENT="Copyright © 2000 Kariyer.Net">
+
+ <script type="text/javascript">
+
+ 	
+  		// -- Deluxe Tuner Style Names
+		var itemStylesNames=["Top Item",];
+		var menuStylesNames=["Top Menu",];
+		// -- End of Deluxe Tuner Style Names
+
+		//--- Common
+		var isHorizontal=1;
+		var smColumns=1;
+		var smOrientation=0;
+		var smViewType=0;
+		var dmRTL=0;
+		var pressedItem=-2;
+		var itemCursor="pointer";
+		var itemTarget="_self";
+		var statusString="link";
+		var blankImage="/js/kariyermenu/blank.gif";
+		
+		//--- Dimensions
+		var menuWidth="550";
+		var menuHeight="15";
+		var smWidth="180";
+		var smHeight="";
+		
+		//--- Positioning
+		var absolutePos=0;
+		var posX="10";
+		var posY="10";
+		var topDX=-1;
+		var topDY=1;
+		var DX=-4;
+		var DY=-1;
+		
+		//--- Font
+		var fontStyle="12px verdana";
+		var fontColor=["#353364","#FFFFFF"];
+		var fontDecoration=["none","none"];
+		var fontColorDisabled="#AAAAAA";
+		
+		//--- Appearance
+		var menuBackColor="#FCFCFC";
+		var menuBackImage="" ;
+		var menuBackRepeat="no-repeat";
+		var menuBorderColor="#858585";
+		var menuBorderWidth=1;
+		var menuBorderStyle="solid";
+		
+		//--- Item Appearance
+		var itemBackColor=["#f0f0f0","#621354"];
+		var itemBackImage=["",""];
+		var itemBorderWidth=0;
+		var itemBorderColor=["#FCEEB0","#FF8040"];
+		var itemBorderStyle=["solid","solid"];
+		var itemSpacing=1;
+		var itemPadding="4";
+		var itemAlignTop="center";
+		var itemAlign="left";
+		var subMenuAlign="";
+		
+		//--- Icons
+		var iconTopWidth=16;
+		var iconTopHeight=16;
+		var iconWidth=18;
+		var iconHeight=18;
+		var arrowWidth=7;
+		var arrowHeight=7;
+		var arrowImageMain=["",""];
+		var arrowImageSub=["/js/kariyermenu/arr_black_2.gif","/js/kariyermenu/arr_white_2.gif"];
+		
+		//--- Separators
+		var separatorImage="/js/kariyermenu/sep_grey.gif";
+		var separatorWidth="100%";
+		var separatorHeight="3";
+		var separatorAlignment="left";
+		var separatorVImage="";
+		var separatorVWidth="3";
+		var separatorVHeight="100%";
+		var separatorPadding="0px";
+		
+		//--- Floatable Menu
+		var floatable=0;
+		var floatIterations=6;
+		var floatableX=1;
+		var floatableY=1;
+		
+		//--- Movable Menu
+		var movable=0;
+		var moveWidth=2;
+		var moveHeight=2;
+		var moveColor="#DECA9A";
+		var moveImage="";
+		var moveCursor="move";
+		var smMovable=0;
+		var closeBtnW=15;
+		var closeBtnH=15;
+		var closeBtn="";
+		
+		//--- Transitional Effects & Filters
+		var transparency="100"; //transparanlýk
+		var transition=0; //geçiþler
+		var transOptions="";
+		var transDuration=1;
+		var transDuration2=1;
+		var shadowLen=4;
+		var shadowColor="#B1B1B1";
+		var shadowTop=0;
+		
+		//--- CSS Support (CSS-based Menu)
+		var cssStyle=0;
+		var cssSubmenu="";
+		var cssItem=["",""];
+		var cssItemText=["",""];
+		
+		//--- Advanced
+		var dmObjectsCheck=1;
+		var saveNavigationPath=1;
+		var showByClick=0;
+		var noWrap=0;
+		var pathPrefix_img="";
+		var pathPrefix_link="";
+		var smShowPause=200;
+		var smHidePause=1000;
+		var smSmartScroll=1;
+		var smHideOnClick=1;
+		var dm_writeAll=0;
+		
+		//--- AJAX-like Technology
+		var dmAJAX=0;
+		var dmAJAXCount=0;
+		
+		//--- Dynamic Menu
+		var dynamic=0;
+		
+		//--- Keystrokes Support
+		var keystrokes=1;
+		var dm_focus=1;
+		var dm_actKey=113;
+		
+		var itemStyles = [
+		    ["itemBackColor=#F0F0F0,#621354"],
+		];
+		var menuStyles = [
+		    ["menuBorderWidth=0","menuBackColor=#F2F3F2","itemSpacing=0","itemPadding=4"],
+		];
+
+ 
+	var dmWorkPath = "/js/kariyermenu/";
+	var menuItems = [
+
+    ["","/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6","/newimg/sk1/menu1.jpg" ,"/newimg/sk1/menu1a.jpg" , , "_parent", "0", "0", , ],
+    ["","/jobsearch/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6","/newimg/sk1/menu2.jpg" ,"/newimg/sk1/menu2a.jpg", , , , , , ],
+        //["|Güncel Ýlanlar","", , , , , , , , ],
+        ["|Bugünün Ýlanlarý","/jobsearch/joblist.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&prcode=1", "", , , 	"_parent", , , , ],
+        //["|Son 3 Günün Ýlanlarý","/jobsearch/joblist.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&prcode=3", , , , , , , , ],
+        //["|Son 7 Günün Ýlanlarý","/jobsearch/joblist.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&prcode=7", , , , , , , , ],
+		["|-","", , , , , , , , ],
+		["|Sektörel Sayfalar","", , , , , , , , ],
+			["||Biliþim","http://bilisim.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Danýþmanlýk","http://danismanlik.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Dönemsel","http://donemsel.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Eðitim","http://egitim.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Finans","http://finans.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Hýzlý Tüketim","http://hizlituketim.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Kampüs","http://kampus.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Kimya","http://kimya.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Lojistik","http://lojistik.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Otomotiv","http://otomotiv.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Saðlýk","http://saglik.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Sigorta","http://sigorta.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Tekstil","http://tekstil.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Turizm","http://turizm.kariyer.net", , , ,"_blank"  , , , , ],
+        ["|Bölgesel Ýlanlar","", , , , , , , , ],
+			["||Akdeniz","http://akdeniz.kariyer.net?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_blank"  , , , , ],
+			["||Ankara","http://ankara.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Bursa","http://bursa.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Çukurova","http://cukurova.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Ege","http://ege.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Güneydoðu","http://guneydogu.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Kocaeli","http://kocaeli.kariyer.net", , , ,"_blank"  , , , , ],
+			["||Konya","http://konya.kariyer.net", , , ,"_blank"  , , , , ],
+
+		["|-","", , , , , , , , ],
+        //["|Ýmajlý Ýlanlar","/JobSearch/joblist.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&prcode=50", , , ,"_parent" , , , , ],
+        ["|Size Özel Ýlanlar","/JobSearch/joblist.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&prcode=999", , , ,"_parent" , , , , ],
+        ["|Listenizdeki Ýlanlar","/JobSearch/joblist.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&prcode=300", , , ,"_parent" , , , , ],
+        ["|Executive Ýlanlar","/executive/JobSearch/joblist.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_blank" , , , , ],
+        ["|Eski Hükümlü, Þehit Yakýný, Engelli Ýlanlarý","/JobSearch/joblist.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&prcode=99", , , ,"_parent" , , , , ],
+    ["","/kariyerim/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6","/newimg/sk1/menu3.jpg" ,"/newimg/sk1/menu3a.jpg" , ,"_parent" , , , , ],
+		["|Üyelik Bilgilerim","/kariyerim/loginupdate.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_parent" , , , , ],
+        ["|Özgeçmiþlerim","/kariyerim/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_parent" , , , , ],
+		["|Baþvurularým","/kariyerim/myapplications.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_parent" , , , , ],
+        ["|Mesajlarým","/kariyerim/mymessages.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_parent" , , , , ],
+        ["|SMS Mesajlarým","/kariyerim/onaylist.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_parent" , , , , ],
+        ["|Mülakatlarým","/kariyerim/mulakatlarim.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_parent" , , , , ],
+        ["|Ýþ Habercim","/isHabercim/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_parent" , , , , ],
+        ["|K-Testlerim","/ktest/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_parent" , , , , ],
+        ["|Mesaj Panosu","/pano/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_parent" , , , , ],
+        
+		["|-","", , , , , , , , ],
+        ["|Güvenli Çýkýþ","/kariyerim/logout.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_parent" , , , , ],
+		
+    ["","/kariyerrehberi/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6","/newimg/sk1/menu4.jpg" ,"/newimg/sk1/menu4a.jpg" , ,"_parent" , , , , ],
+        ["|Röportajlar","/kariyerrehberi/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&xx02=1", , , ,"_parent" , , , , ],
+        ["|Makaleler","/kariyerrehberi/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&xx02=2", , , ,"_parent" , , , , ],
+        ["|Sýra Dýþý Kariyer","/kariyerrehberi/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&xx02=6", , , ,"_parent" , , , , ],
+        ["|Ýþveren Baþarý Hikayeleri","/employers/login/firmaBHikaye.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6", , , ,"_parent" , , , , ],
+        ["|Aday Baþarý Hikayeleri","/kariyerrehberi/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&xx02=5", , , ,"_parent" , , , , ],
+	];
+
+	function Yardim(HelpId)
+	{
+		mHelpLink= document.getElementById("HelpLink")
+		mHelpDiv= document.getElementById("HelpDiv")
+		mHelpDiv.style.top = mHelpLink.offsetTop+20+0
+		mHelpDiv.style.left = mHelpLink.offsetLeft-430+0
+		if (mHelpDiv.style.display=='')
+			mHelpDiv.style.display='none'
+		else
+			mHelpDiv.style.display=''
+		
+	}
+
+ 	function CloseHelp()
+	{
+		mHelpDiv= document.getElementById("HelpDiv");
+		mHelpDiv.style.display='none';
+	}
+
+	function gokariyer(sayfa,parametreler,yenipencere)
+	{	
+		//alert(sayfa)
+		sayfa=sayfa+"?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6"+parametreler;
+		if (yenipencere==1)
+			{
+			window.open(sayfa);
+			}
+		else
+			{
+			document.location.href=sayfa;
+			}
+
+	}
+	
+	function newWindow (url,h,w)
+	{
+		kobiWindow = window.open("", "kobi", "scrollbars=yes,status=no,width="+w+",height="+h+",location=no,resizable=yes");
+		kobiWindow.document.location.href = url+"";
+		kobiWindow.focus();
+	}
+
+
+	</script>
+  	
+	 <script type="text/javascript" src="/js/kariyermenu/dmenu.js"></script>
+	
+</head>
+
+
+
+
+	<body>
+
+	<table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" >
+		<tr>
+			<td valign="top">
+				<table border="0" width="756" cellpadding="0" cellspacing="0" align="center">
+					
+
+					<tr>
+						<td colspan="2">
+							<MAP NAME=EmployersMap>
+								<AREA HREF="/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" target="" ALT="" COORDS="60,20,300,80">
+								
+									<AREA HREF="http://web6.kariyer.net/employers/login/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" target="_blank" ALT="" COORDS="605,5,745,50">
+								
+								<AREA HREF="/employers/forms/newCompany.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" target="_blank" ALT="" COORDS="605,55,745,67" >
+								<AREA HREF="/support/firmaneden.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" target="_blank" ALT="" COORDS="605,72,745,90">
+							</MAP>
+							
+					<img src="/newimg/sk1/header/ust.jpg" width="756" height="96" alt="" border="0" UseMap="#EmployersMap"></td>
+					</tr>
+					<tr>
+						<td background="/newimg/sk1/header/menubar.jpg" width="593" height="27">
+							<table border=0 width="98%" cellpadding="0" cellspacing="0" align="center">
+								<tr>
+									<td>
+										<script language="JavaScript">
+											dm_init();
+										</script>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td  background="/newimg/sk1/header/back.jpg" valign="middle" height="27" width=163>
+							<table border=0 width="100%" cellpadding="0" cellspacing="0" align="center">
+								<tr>
+									<td width="14"></td>
+									
+										<td align="right"><span id="HelpLink" style="position:relative"><a  href="javascript:Yardim('Goruntuleme')" class="Link"><img src="/newimg/sk1/header/yardim.jpg"  alt="" border="0"></a></span></td>
+									
+									<td>&nbsp;&nbsp;</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			
+	<div id="HelpDiv" style="position: absolute; display:none; z-index:1300">
+			<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"
+			WIDTH="490" HEIGHT="396" id="movie">
+			<PARAM NAME=movie VALUE="/newimg/tips/Goruntuleme.swf"> 
+			<PARAM NAME=quality VALUE=high>
+			<PARAM NAME=bgcolor VALUE=#FFFFFF>
+			
+			<EMBED src="/newimg/tips/Goruntuleme.swf" quality=high bgcolor=#FFFFFF WIDTH="490" HEIGHT="396" 
+			NAME="movie" ALIGN="" TYPE="application/x-shockwave-flash"	PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">
+			</EMBED>
+			</OBJECT>
+	</div>
+	
+	
+<table border=0 width="756" cellpadding="1" cellspacing="0" align="center" class="atabar" height="28">
+<tr>
+	<td>&nbsp;
+	<a href="/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" class="atabar">Anasayfa</a> > 
+	<a href="/kariyerim/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" class="atabar">Kariyerim</a> > 
+	Özgeçmiþ Görüntüleme
+
+		</td>
+	
+		<td align="right" nowrap width="80" >
+			<a href="/Kariyerim/logout.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6"  title="Güvenli Çýkýþ" class=link>Güvenli Çýkýþ</a>
+		</td>
+	
+		<td width="1">&nbsp;</td>
+
+	
+	</tr>
+	</table>
+	
+
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="/Js/kariyer1.js"></script> 
+<SCRIPT LANGUAGE="JavaScript1.2" SRC="/Js/kariyer2.js"></script> 
+
+
+		<script language="javascript">
+			CopyPasteCV="1982 yýlýnda Boluda doðdum.<br>Ýlköðreni mi Bolu Ýnkýlap Ýlkokulunda, ilkokul beþinci sýnýfý Ankara Yeni Mutlu Ýlköðretim Okulunda, Orta öðrenimi Bolu 50. Yýl Ýzzet Baysal Ýlköðretim Okulunda ve lise öðrenimimi Bolu Atatürk Lisesi -Süper Lise- Bölümünde Tamamladým. Üniversite sýnavýnda Yýldýz Teknik Üniversitesi- Matematik Mühendisliði bölümünü kazandým. Þu an hala bu bölümde okumaktayým.  Son sýnýftayým<br><br>Almýþ olduðum matematik ve bilgisayara dayalý eðitimle kendimi  yazýlým alanýnda geliþtirmeye çalýþtým. Php Mysql alanýnda  projelerim var.  Veritabaný yönetimi ve SQL alanýnda kariyer yapmak istiyorum, bu alanda kendimi iyi görmekteyim. <br><br>Ayrýca kullandýðým Macromeadia Flash, Dreamweaver, Ultradev, Fireworks, Frontpage gibi programlarla çok sayýda web sitesi yapýp okul harçlýðýmý çýkarmaktayým. <br><br>Okulda yapmýþ olduðumuz projeler : Yüksek katlý binalar için asansör kabin sayýsýnýn hesaplanmasý ve gerekli trafiðin tayin edilmesi, Hasta Takip Programý, Öðrenci Kayýt Otomasyonu, Taþýma Sistemi Simülasyonu, Kütüphane Kayýt Sistemi.<br><br>Bitirme tezi olarak da stok kontrok modelleri ve bir firmaya bu modellerin uygulanmasý projesini yaptým.<br><br>Þu an Türk Hava Yollarý, Ticari Ýþler Genel Müdürlüðü Ýdari Ýþler de çalýþmaktayým. Burada personel bilgi bankasýný oluþturmaktayým."
+			NameSurname="FERÝDUN ERSEN ÖZÇELÝK"
+		</script>
+		
+		<BR>
+		<table width="756" border="0" align="center" cellspacing=0 cellpadding=0>
+			<tr>
+				<td valign="top">
+					<!--iþlemler-->
+					<table width="206" border="0" cellspacing=0 cellpadding=0>
+						<tr>
+							<td><img src="/newimg/sk1/Preview/islemlerust.jpg" width="206" height="39" alt="" border="0"></td>
+						</tr>
+						<tr>
+							<td background="/newimg/sk1/Preview/islemlerBack.jpg">
+								<table width="200" border="0" cellspacing=3 cellpadding=1 align="center">
+									<tr>
+										<td width="18"><img src="/newimg/sk1/guncelle.gif" width="18" height="18" alt="" border="0"></td>
+										<td><a href="/kariyerim/cvWizard/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&cvID=458.466.449.517.548.568.584&from=" class="link">Özgeçmiþi Güncelle</a></td>
+									</tr>
+									<!--tr>
+										<td width="18"><img src="/newimg/sk1/Preview/zarf.jpg" width="18" height="18" alt="" border="0"></td>
+										<td><a href="javascript:SendCV()" class="link">E-Posta ile Gönder</a></td>
+									</tr-->
+									<tr>
+										<td width="18"><img src="/newimg/sk1/Preview/print.jpg" width="18" height="18" alt="" border="0"></td>
+										<td><a href="javascript:DisplayCV()" class="link">Yazdýr</a></td>
+									</tr>
+									<tr>
+										<td width="18"><img src="/newimg/sk1/Preview/foto.jpg" width="18" height="18" alt="" border="0"></td>
+										<td><a href="/Kariyerim/photo_add.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" class="link">Fotoðraf Ýþlemleri</a></td>
+									</tr>
+									<tr>
+										<td width="18"><img src="/newimg/sk1/Preview/word.jpg" width="18" height="18" alt="" border="0"></td>
+										<td><a href="http://web.kariyer.net/Kariyerim/MyUploadFiles.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" class="link">Dosya Ýþlemleri</a></td>
+									</tr>
+									<!--tr>
+										<td width="18"><img src="/newimg/sk1/Preview/atac.jpg" width="18" height="18" alt="" border="0"></td>
+										<td><a href="" class="link">Klasik Özgeçmiþ</a></td>
+									</tr-->
+		
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td><img src="/newimg/sk1/Preview/islemlerAlt.jpg" width="206" height="4" alt="" border="0"></td>
+						</tr>
+					</table>
+					<!--iþlemler SON-->
+					
+						<table width="206" border="0" cellspacing=0 cellpadding=0>
+							<tr>
+								<td><img src="/newimg/sk1/Preview/eksiklerinizUst.jpg" width="206" height="47" alt="" border="0"></td>
+							</tr>
+							<tr>
+								<td background="/newimg/sk1/Preview/islemlerBack.jpg">
+									<table width="200" border="0" cellspacing=3 cellpadding=1 align="center">
+									<tr><td valign="top"><img src="/newimg/sk1/Preview/bulletSiyah.jpg" width=3 height=3 alt="" border=0 align="absmiddle"> <a href="/kariyerim/cvWizard/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&CvId=458.466.449.517.548.568.584&hedefbolum=Tecrubeler" class=link target="_blank">Ýþ Tecrübesi</a></td></tr><tr><td valign="top"><img src="/newimg/sk1/Preview/bulletSiyah.jpg" width=3 height=3 alt="" border=0 align="absmiddle"> <a href="/kariyerim/cvWizard/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&CvId=458.466.449.517.548.568.584&hedefbolum=YabanciDil" class=link target="_blank">Yabancý Dil</a></td></tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td><img src="/newimg/sk1/Preview/islemlerAlt.jpg" width="206" height="4" alt="" border="0"></td>
+							</tr>
+						</table>
+					
+						<br>
+						<table width="206" border="0" cellspacing=0 cellpadding=0>
+							<tr>
+								<td><img src="/newimg/sk1/Preview/onerilerimiz.jpg" width="206"  alt="" border="0"></td>
+							</tr>
+							<tr>
+								<td background="/newimg/sk1/Preview/islemlerBack.jpg">
+									<table width="200" border="0" cellspacing=3 cellpadding=1 align="center">
+									<tr>
+										<td>Aþaðýdaki alanlarý doldurmanýz size avantaj saðlayabilir.</td>
+									</tr>
+									<tr><td valign="top"><img src="/newimg/sk1/Preview/bulletSiyah.jpg" width=3 height=3 alt="" border=0 align="absmiddle"> <a href="/kariyerim/cvWizard/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6&CvId=458.466.449.517.548.568.584&hedefbolum=AdSoyad" class=link target="_blank">Doðum Yeri</a></td></tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td><img src="/newimg/sk1/Preview/islemlerAlt.jpg" width="206" height="4" alt="" border="0"></td>
+							</tr>
+						</table>
+					
+						
+				</td>
+				<td width="536" valign="top">
+					<table width="530" border=0 cellspacing=0 cellpadding=0 align="center"><tr><td class="preview2"><table width="530" border=0 cellspacing=0 cellpadding=0><tr><td class="preview2">
+<table width="530" border="0" class="preview2" align="center" cellspacing=1 cellpadding=0>
+<tr class="preview1">
+<td colspan="2" align="right" valign="MIDDLE">
+<font size=1 color="" face="verdana,geneva"><img src="/images/cvmycv.gif" alt="" border="0">&nbsp;
+</td>
+</tr>
+<!-- Ýletiþim -->
+<tr class="preview3">
+<td width="20" align="center" valign="top" class="preview1">
+<br>Ý<BR>L<BR>E<BR>T<BR>Ý<BR>Þ<BR>Ý<BR>M<BR><br>
+</td>
+<td class="preview1">
+<table border=0 width="500" cellpadding=4 cellspacing=1>
+<tr>
+<td align="left" class="preview5" width="120" valign="top">
+Ad Soyad:
+</td>
+<td align="left" class="preview3">
+<b>FERÝDUN ERSEN <font style="text-transform:capitalize">ÖZÇELÝK</b>
+</TD>
+<td width="110" align="center" class="preview3" rowspan=4>
+<img src="/incfiles/cvresimgoster.kariyer?cvID=458.466.449.517.548.568.584&adayCinsiyet=False&from=CvGoruntuleme&chk_userrefno=458.448.485.499.521.523.611" border="1" width="100" height="130" align="center">
+</td>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Adres: 
+<BR>
+<img src="tpx.gif" width="120" height="1" alt="" border="0"> 
+</td>
+<td align="LEFT" class="preview3">
+
+19 Mayýs Mah, Celal Atik Sk No:20/33 Solduz Apt <BR>
+34360  ONDOKUZMAYIS - ÞÝÞLÝ <br> ÝSTANBUL(AVR.), TÜRKÝYE
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Telefonlar: 
+</td>
+<td align="LEFT" class="preview3">
+
+Cep 90 535 375 06 60<BR>Cep 90 555 700 62 42
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Email: 
+</td>
+<td align="LEFT" class="preview3">
+<a href="mailto:feridunozcelik@gmail.com" style="text-decoration:none" class="link">feridunozcelik@gmail.com</a>
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Web Sayfasý: 
+</td>
+<td align="LEFT" class="preview3" colspan=2>
+<a href="/redirect.kariyer?url=http%3A%2F%2Fwww%2Ematengs%2Ecom" target="_new" style="text-decoration:none">http://www.matengs.com</a>
+&nbsp;</TD>
+</tr>
+</table>
+</td>
+</tr>
+<!-- Tecrübe -->
+<tr class="preview3">
+<td align="center" valign="top" class="preview1">
+<br>T<BR>E<BR>C<BR>R<BR>Ü<BR>B<BR>E<br>
+</td>
+<td class="preview1" valign="top">
+<table border=0 width="500" cellpadding=4 cellspacing=1>
+<tr>
+<td align="right" class="preview5" width="120" valign="top">
+06.2006- 
+<BR><img src="tpx.gif" width="120" height="1" alt="" border="0"></td>
+<td align="left" valign="top" class="preview3" width="380">
+
+<b>Türk Hava Yollarý , Ýstanbul<BR>
+Veritabaný Sorumlusu<BR></b>
+Yurt Dýþýndaki Tüm Türk Hava Yollarý'na ait ofislerin bilgi bankasýný oluþturup online iþlemler yapýlmasýna zemin hazýrlayacak bir veritabaný sistemi oluþturdum.<BR>
+
+</TD>
+</tr>
+<tr>
+<td align="right" class="preview5" width="120" valign="top">
+07.2005-09.2005 
+</td>
+<td align="left" valign="top" class="preview3" width="380">
+
+<b>Smartsoft , Ýstanbul<BR>
+Yazýlým Uzman Yardýmcýsý<BR></b>
+Çalýkþtýðým kurum Kamu ve özel bankalarýn kredi ve bankamatik kartlarý için yazýlým geliþtirmek, chip takmak ve danýþmanlýk vermek gibi hizmetleri vardý.
+
+Burada yazýlým alanýnda kendimi geliþtirmeye çalýþtým<BR>
+
+</TD>
+</tr>
+<tr>
+<td align="right" class="preview5" width="120" valign="top">
+01.2002-02.2003 
+</td>
+<td align="left" valign="top" class="preview3" width="380">
+
+<b>Yavuz Bilgisayar , Türkiye<BR>
+Teknik Destek Elemaný<BR></b>
+asd<BR>
+
+</TD>
+</tr>
+<tr>
+<td align="right" class="preview5" width="120" valign="top">
+2002- 
+</td>
+<td align="left" valign="top" class="preview3" width="380">
+
+<b>MATENGS , Ýstanbul<BR>
+webmaster, administrator<BR></b>
+Siteyi kendim kurdum<BR>
+
+</TD>
+</tr>
+</table>
+</td>
+</tr>
+<!-- Eðitim -->
+<tr class="preview3">
+<td align="center" valign="top" class="preview1">
+<br>E<BR>Ð<BR>Ý<BR>T<BR>Ý<BR>M<br><br>
+</td>
+<td class="preview1">
+<table border=0 width="500" cellpadding=4 cellspacing=1>
+<tr>
+<td align="left" class="preview5" width="120" valign="top">
+Eðitim Durumu: 
+</td>
+<td align="left" class="preview3" width="380">
+
+Üniversite (Mezun)
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Üniversite: 
+</td>
+<td align="left" class="preview3">
+
+Yýldýz Teknik Üniversitesi (09.2001 - 09.2006)
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+&nbsp;&nbsp;&nbsp;Fakülte: 
+</td>
+<td align="left" class="preview3">
+
+Kimya-Metalurji Fakültesi
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+&nbsp;&nbsp;&nbsp;Bölüm: 
+</td>
+<td align="left" class="preview3">
+
+Matematik Mühendisliði
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+&nbsp;&nbsp;&nbsp;Mezuniyet Notu: 
+</td>
+<td align="left" class="preview3">
+
+2,66 / 4
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Lise: 
+</td>
+<td align="left" class="preview3">
+
+Bolu Atatürk Lisesi Ybd Aðýrlýklý Bölüm (06.2000)
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+&nbsp;&nbsp;&nbsp;Bölüm: 
+</td>
+<td align="left" class="preview3">
+
+Fen Bilimleri
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+&nbsp;&nbsp;&nbsp;Mezuniyet Notu: 
+</td>
+<td align="left" class="preview3">
+
+4,91 / 5
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Yabancý Dil: 
+</td>
+<td align="left" class="preview3">
+
+<li class="preview3">Türkçe ( Okuma:10  Yazma:10  Konuþma:10 )
+<li class="preview3">Ýngilizce ( Okuma:8  Yazma:8  Konuþma:7 )<BR>
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Bilgisayar Bilgileri:<br><img src="\images\tpx.gif" width=120 height=1 border=0 alt=""> 
+</td>
+<td align="left" valign="top" class="preview3">PHP (Çok iyi), MySQL (çok iyi), C (Çok iyi), HTML (Çok iyi), JAVA (baþlangýç), 
+Security Administrator (Ýyi), Local Area Network (Çok iyi), TCP/IP (Ýyi), Linux (baþlangýç), MS Windows Professional (Çok iyi) Macromedia Dreamweaver (Çok iyi), Macromedia Flash (Ýyi), Macromedia Fireworks (Çok iyi), Microsoft Front page (Çok iyi), Adobe Photoshop (Çok iyi), Adobe Acrobat (Ýyi), Ulead Gif Animator (Ýyi), MS Office Programlarý Word,Excel,Powerpoint(Çok iyi) Data Analyst (Çok iyi), Donaným (çok iyi)&nbsp;</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Sertifika Bilgileri: 
+<BR>
+<img src="tpx.gif" width="120" height="1" alt="" border="0">
+</td>
+<td align="left" class="preview3">
+
+<table width='100%' border='0' cellpadding='0'  cellspacing='0'>
+<TBODY class="preview3"   ID="layer01">
+<tr onClick="show('layer1');show('layer01')">
+<td><li class=preview3>MS Office Project                       </td>
+</tr>
+</TBODY>
+<TBODY class="preview3"  ID="layer1" style="display:none;">
+<tr onClick="show('layer1');show('layer01')">
+<td><li class="preview3">MS Office Project                       </td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;(Bilge Adam&nbsp; - &nbsp;02.08.2006)</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;&nbsp;&nbsp;Temel MS Office Project Eðitimi, Türk Hava Yollarý Personeli olarak topluca aldýk.</td>
+</tr>
+</TBODY>
+</table>
+
+&nbsp;
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Eðitimler: 
+<BR>
+<img src="tpx.gif" width="120" height="1" alt="" border="0">
+</td>
+<td align="left" class="preview3">
+
+<table width='100%' border='0' cellpadding='0'  cellspacing='0'>
+<TBODY class="preview3"  ID="layer02">
+<tr onClick="show('layer2');show('layer02')">
+<td><li class="preview3">Linux (120 saat)</td>
+</tr>
+</TBODY>
+<TBODY class="preview3"  ID="layer2" style="display:none;">
+<tr onClick="show('layer2');show('layer02')">
+<td><li class="preview3">Linux</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;(Yýldýz Teknik Üniversitesi&nbsp; - &nbsp;20.11.2005 - 18.03.2006)</td>
+</tr>
+<tr>
+<td colspan="2">&nbsp;&nbsp;&nbsp;Temel Linux Eðitimi</td>
+</tr>
+</TBODY>
+</table>
+
+&nbsp;
+</TD>
+</tr>
+</table>
+</td>
+</tr>
+<!-- Kiþisel -->
+<tr class="preview3">
+<td align="center" valign="top" class="preview1">
+<br>K<BR>Ý<BR>Þ<BR>Ý<BR>S<BR>E<BR>L<br><br>
+</td>
+<td class="preview1">
+<table border=0 width="500" cellpadding=4 cellspacing=1>
+<tr>
+<td align="left" class="preview5" width="120" valign="top">
+Doðum Tarihi: 
+</td>
+<td align="left" class="preview3" width="380">
+
+29.03.1982
+&nbsp;
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Medeni Durum: 
+</td>
+<td align="left" class="preview3">
+
+Bekar
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Askerlik: 
+</td>
+<td align="left" class="preview3">
+
+Tecilli&nbsp;(30.09.2009)
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Ehliyet: 
+</td>
+<td align="left" class="preview3">
+
+B  (2002)
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Hobiler: 
+</td>
+<td align="left" class="preview3">
+
+Bilgisayar, internet, müzik, daða týrmanma, bisikl
+&nbsp;
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Dernekler & Klüpler: 
+</td>
+<td align="left" class="preview3">
+
+biliþim klübü, türkiye bilgisayar mühendisleri ve programcýlar derneði, Giriþimciler Kulübü, Matengs
+&nbsp;
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Sigara Kullanýmý: 
+</td>
+<td align="left" class="preview3">
+
+Kullanmýyorum
+&nbsp;
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Ýletiþim: 
+<BR>
+<img src="tpx.gif" width="120" height="1" alt="" border="0">
+</td>
+<td align="left" class="preview3">
+
+Elektronik Posta , Telefonlar 
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Referanslar: 
+</td>
+<td align="left" class="preview3">
+
+<table width='100%' border='0' cellpadding='1' cellspacing='0'>
+<TBODY class="preview3"  ID="layer03">
+<tr onClick="show('layer3');show('layer03')">
+<td><li class="preview3"></td>
+<td>Eþref Özgür Altuntaþ</td>
+<td>SmartSoft</td>
+<td>&nbsp;</td></tr>
+</TBODY>
+<TBODY class="preview3"  ID="layer3" style="display:none;">
+<tr onClick="show('layer03');show('layer3');">
+<td><font face="webdings" size="2" color="black">6</td>
+<td>Ad Soyad</td>
+<td>Eþref Özgür Altuntaþ</td>
+<td rowspan="5" valign="top">&nbsp;</td></tr>
+<tr>
+<td><font face="webdings" size="2" color="black"></td>
+<td>Firma</td>
+<td>SmartSoft</td>
+</tr>
+<tr>
+<td><font face="webdings" size="2" color="black"></td>
+<td>Pozisyon</td>
+<td>Yazýlým Geliþtirme Uzmaný</td>
+</tr>
+<tr>
+<td></td>
+<td>Telefon</td>
+<td>05323339544</td>
+</tr>
+<tr>
+<td></td>
+<td>E-Mail</td>
+<td>e,ozgur@smartsoft-it.com</td>
+</tr>
+</TBODY>
+<tr>
+<td colspan="4" bgcolor="#c6c3e7"><img src="/Images/tpx.gif" width="1" height="1" border="0"></td>
+</tr>
+<TBODY class="preview3"  ID="layer04">
+<tr onClick="show('layer4');show('layer04')">
+<td><li class="preview3"></td>
+<td>Reþat Köþker</td>
+<td>Yýldýz Teknik Üniversitesi</td>
+<td>&nbsp;</td></tr>
+</TBODY>
+<TBODY class="preview3"  ID="layer4" style="display:none;">
+<tr onClick="show('layer04');show('layer4');">
+<td><font face="webdings" size="2" color="black">6</td>
+<td>Ad Soyad</td>
+<td>Reþat Köþker</td>
+<td rowspan="5" valign="top">&nbsp;</td></tr>
+<tr>
+<td><font face="webdings" size="2" color="black"></td>
+<td>Firma</td>
+<td>Yýldýz Teknik Üniversitesi</td>
+</tr>
+<tr>
+<td><font face="webdings" size="2" color="black"></td>
+<td>Pozisyon</td>
+<td>Akademisyen </td>
+</tr>
+<tr>
+<td></td>
+<td>Telefon</td>
+<td>02124491729</td>
+</tr>
+<tr>
+<td></td>
+<td>E-Mail</td>
+<td>kosker@yildiz.edu.tr</td>
+</tr>
+</TBODY>
+<tr>
+<td colspan="4" bgcolor="#c6c3e7"><img src="/Images/tpx.gif" width="1" height="1" border="0"></td>
+</tr>
+<TBODY class="preview3"  ID="layer05">
+<tr onClick="show('layer5');show('layer05')">
+<td><li class="preview3"></td>
+<td>Meliha Özçelik</td>
+<td>Yavuz Bilgisayar</td>
+<td>&nbsp;</td></tr>
+</TBODY>
+<TBODY class="preview3"  ID="layer5" style="display:none;">
+<tr onClick="show('layer05');show('layer5');">
+<td><font face="webdings" size="2" color="black">6</td>
+<td>Ad Soyad</td>
+<td>Meliha Özçelik</td>
+<td rowspan="5" valign="top">&nbsp;</td></tr>
+<tr>
+<td><font face="webdings" size="2" color="black"></td>
+<td>Firma</td>
+<td>Yavuz Bilgisayar</td>
+</tr>
+<tr>
+<td><font face="webdings" size="2" color="black"></td>
+<td>Pozisyon</td>
+<td>Yazýlým Geliþtirme Uzmaný</td>
+</tr>
+<tr>
+<td></td>
+<td>Telefon</td>
+<td>05052786725</td>
+</tr>
+<tr>
+<td></td>
+<td>E-Mail</td>
+<td>melihaozcelik@yavuzbilgisayar.com.tr</td>
+</tr>
+</TBODY>
+<tr>
+<td colspan="4" bgcolor="#c6c3e7"><img src="/Images/tpx.gif" width="1" height="1" border="0"></td>
+</tr>
+<TBODY class="preview3"  ID="layer06">
+<tr onClick="show('layer6');show('layer06')">
+<td><li class="preview3"></td>
+<td>Halil Ýbrahim POLAT</td>
+<td>Türk Hava Yollarý</td>
+<td>&nbsp;</td></tr>
+</TBODY>
+<TBODY class="preview3"  ID="layer6" style="display:none;">
+<tr onClick="show('layer06');show('layer6');">
+<td><font face="webdings" size="2" color="black">6</td>
+<td>Ad Soyad</td>
+<td>Halil Ýbrahim POLAT</td>
+<td rowspan="5" valign="top">&nbsp;</td></tr>
+<tr>
+<td><font face="webdings" size="2" color="black"></td>
+<td>Firma</td>
+<td>Türk Hava Yollarý</td>
+</tr>
+<tr>
+<td><font face="webdings" size="2" color="black"></td>
+<td>Pozisyon</td>
+<td>Ýdari Ýþler Müdürü</td>
+</tr>
+<tr>
+<td></td>
+<td>Telefon</td>
+<td>05336445623</td>
+</tr>
+<tr>
+<td></td>
+<td>E-Mail</td>
+<td>hipolat@thy.com</td>
+</tr>
+</TBODY>
+<tr>
+<td colspan="4" bgcolor="#c6c3e7"><img src="/Images/tpx.gif" width="1" height="1" border="0"></td>
+</tr>
+<TBODY class="preview3"  ID="layer07">
+<tr onClick="show('layer7');show('layer07')">
+<td><li class="preview3"></td>
+<td>Ali Yaþar Aydoðan</td>
+<td>Türk Hava Yollarý</td>
+<td>&nbsp;</td></tr>
+</TBODY>
+<TBODY class="preview3"  ID="layer7" style="display:none;">
+<tr onClick="show('layer07');show('layer7');">
+<td><font face="webdings" size="2" color="black">6</td>
+<td>Ad Soyad</td>
+<td>Ali Yaþar Aydoðan</td>
+<td rowspan="5" valign="top">&nbsp;</td></tr>
+<tr>
+<td><font face="webdings" size="2" color="black"></td>
+<td>Firma</td>
+<td>Türk Hava Yollarý</td>
+</tr>
+<tr>
+<td><font face="webdings" size="2" color="black"></td>
+<td>Pozisyon</td>
+<td>Pazarlama Müdürü</td>
+</tr>
+<tr>
+<td></td>
+<td>Telefon</td>
+<td>05386815549</td>
+</tr>
+<tr>
+<td></td>
+<td>E-Mail</td>
+<td>ayaydogan@thy.com</td>
+</tr>
+</TBODY>
+</table>
+
+
+</TD>
+</tr>
+<tr class="preview3">
+<td align="left" class="preview5" valign="top">
+Dosyalar: 
+<BR>
+<img src="tpx.gif" width="120" height="1" alt="" border="0">
+</td>
+<td align="left" class="preview3">
+
+<li class="preview3"><a class="preview3" style="text-decoration:none" href="http://web9.kariyer.net/UploadFiles/Executive/0000/0000/1045/636/feriduncv.doc" target="_blank">Word de hazirlanmisCV</a>
+
+</TD>
+</tr>
+</table>
+</td>
+</tr>
+<tr id="prntTr" class="preview3">
+<td align="center" valign="top" class="preview1">
+&nbsp;
+</td>
+<td class="preview3" valign="top" align="center">
+Klasik Özgeçmiþinizi Görmek Ýçin <a href="javascript:ShowCV(NameSurname,CopyPasteCV);" class="link">Týklayýn.</a>
+</TD>
+</tr>
+<tr class="preview1">
+<td colspan="2" align="right" valign="MIDDLE"> 
+&nbsp;
+</td>
+</tr>
+</table>
+</td></tr></table></td></tr></table>
+
+				</td>
+			</tr>
+		</table>
+		<br>
+		
+		
+<table border=0 width="756" cellpadding="0" cellspacing="0" align="center">
+
+  <tr> 
+    <td colspan="2" valign="bottom" align="right"> 
+      <a href="javascript:history.go(-1)"><img src="/newimg/sk1//sol_ok.gif" border=0></a>
+    </td>
+  </tr>
+  
+<tr class="atabar">
+	<td width="13">&nbsp;</td>
+	<td height="25" align="center"><font size="1" face="verdana,geneva">
+	<a href="/Footer/tanitim.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" target="_parent" class="Link">Hakkýmýzda</a> 
+        &nbsp;<font class="Link">|</font>&nbsp;
+		<a href="/Footer/gizlilik_prensibi.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" target="_parent" class="Link">Gizlilik Prensibi</a>
+		&nbsp;<font class="Link">|</font>&nbsp;
+        <a href="/Footer/genel_kosullar.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" target="_parent" class="Link">Genel Koþullar</a>
+		<!--
+		&nbsp;<font class="Link">|</font>&nbsp;
+		<a href="/support/firmaneden.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" target="_parent" class="Link">Üyelik Avantajlarý</a>
+		-->
+		<!--
+		&nbsp;<font class="Link">|</font>&nbsp;
+		<a href="/Footer/BasinOdasi/index.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" target="_parent" class="Link">Basýn Odasý</a>
+		-->
+		&nbsp;<font class="Link">|</font>&nbsp;
+		<a href="/Footer/siteHaritasi.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" target="_parent" class="Link">Site Haritasý</a>
+		&nbsp;<font class="Link">|</font>&nbsp;
+		<a href="/Footer/iletisim.kariyer?arn=1045636&sid=200611212341R1479412317276|1phu2jo3tuu88yeyo24yax6" target="_parent" class="Link">Ýletiþim</a>
+	</font></td>
+</tr>
+<tr>
+	<td colspan="2" height="1" align="center"><font class="Link" style="font-face=arial;font-size:10;">Copyright &nbsp;&copy; 1999-2006 Kariyer.Net</font></td>	
+</tr>
+</table>
+
+<BR>
+</td>
+
+	<!--Kule Banner -->
+	
+</tr>
+</table>
+
+
+		
+		</body>
+		</html>

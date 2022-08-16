@@ -1,0 +1,9 @@
+name_start_tag|<span style="color:#000;font-weight:bold;">;;;
+name_end_tag|</span>;;;
+message_start_tag|<span style="color:#000;">;;;
+message_end_tag|</span>;;;
+total_shouts|5;;;
+flood_time|10;;;
+max_message_length|255;;;
+max_name_length|20;;;
+break_length|10;;;
