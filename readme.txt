@@ -1,23 +1,17 @@
 // *************************************************************************************************
-// Title: 		PHP AGTC-Membership system v1.1a
-// Developed by: Andy Greenhalgh
-// Email:		andy@agtc.co.uk
-// Website:		agtc.co.uk
-// Copyright:	2005(C)Andy Greenhalgh - (AGTC)
+// Title: 		PHP KADRO System ver1.0
+// Developed by: Feridun Ozcelik
+// Email:		feridunozcelik@gmail.com
+// Website:		......
+// Copyright:	2005(C)
 // Licence:		GPL, You may use this software under the terms of this General Public License
 // *************************************************************************************************
 //
 ## Intro:
-Thanks for downloading my new version of a simple to use membership login system.
 This script was designed as a stand alone script which can be easily intergrate into any existing website as it is,
 but if you want to intergrate it into a site which uses a content management format, then some alterations will have to be done for
-it to work properly. Remember this is a project and I am constantly working to improve it, so I can't guarantee that
-it will work for everyones needs, but dammmmd close. ;-)
+it to work properly. 
 
-## Latest Updates for v1.1a (For latest updates visit www.agtc.co.uk)
-Ok, as promised I have added a 'request new password' page & a 'log out' page. I've updated the .sql file which now
-has the encrypted admin password in it instead of the un encrypted one, and also I have added a duplicate username & 
-email address check to the adduser.php page, and loads of otherr stuff. See file check below to see all what has been done in v1.1a
 
 Admin Username:	admin
 Admin Password:	admin
