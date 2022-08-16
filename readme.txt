@@ -8,9 +8,8 @@
 // *************************************************************************************************
 //
 ## Intro:
-This script was designed as a stand alone script which can be easily intergrate into any existing website as it is,
-but if you want to intergrate it into a site which uses a content management format, then some alterations will have to be done for
-it to work properly. 
+This project was designed for CRUD operations staff and norm staff of each station by dynamicly.
+Based on PHP,MySQL, HTML, CSS
 
 
 Admin Username:	admin
